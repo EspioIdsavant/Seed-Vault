@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- Seed Vault -->
+    <ThingDef Name="Seed_Vault" ParentName="LWM_DeepStorage">
+        <defName>Seed_Vault</defName>
+        <label>Seed Vault</label>
+        <description>A shelf converted into use as a seed vault.  Contains lots of little containers just for seeds.  Does not protect against deterioration if left outside.</description>
+        <thingClass>Building_Storage</thingClass>
+        <graphicData>
+            <texPath>Things/Building/Furniture/Shelf</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(3,2)</drawSize>
+        </graphicData>
+        <fillPercent>0.4</fillPercent>
+        <castEdgeShadows>true</castEdgeShadows>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Woody</li>
+            <li>Stony</li>
+        </stuffCategories>
+        <costStuffCount>75</costStuffCount>
+        <statBases>
+            <MaxHitPoints>80</MaxHitPoints>
+            <Beauty>1</Beauty>
+            <Mass>16</Mass>
+            <WorkToBuild>1200</WorkToBuild>
+            <Flammability>1.0</Flammability>
+        </statBases>
+        <size>(2,1)</size>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <building>
+            <preventDeteriorationOnTop>false</preventDeteriorationOnTop>
+            <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+            <defaultStorageSettings>
+                <priority>Important</priority>
+                <filter>
+                    <categories>
+                        <li MayRequire="Ludeon.RimWorld.Biotech">SeedsCategory</li>
+                    </categories>
+                </filter>
+            </defaultStorageSettings>
+            <fixedStorageSettings>
+            <filter>
+                <categories>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">SeedsCategory</li>
+                </categories>
+            </filter>
+            </fixedStorageSettings>
+
+        </building>
+        <staticSunShadowHeight>0.9</staticSunShadowHeight>
+        <comps>
+        <li Class="LWM.DeepStorage.Properties">
+            <maxNumberStacks>8</maxNumberStacks>
+            <minTimeStoringTakes>5</minTimeStoringTakes>
+            <additionalTimeEachStack>10</additionalTimeEachStack><!-- Gotta find the correct seed container -->
+            <maxMassOfStoredItem>70</maxMassOfStoredItem>
+            <maxTotalMass>260</maxTotalMass>
+            <overlayType>SumOfItemsPerCell</overlayType>
+        </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Adv Seed Vault -->
+    <ThingDef Name="Adv_Seed_Vault" ParentName="LWM_DeepStorage">
+        <defName>Adv_Seed_Vault</defName>
+        <label>Advanced Seed Vault</label>
+        <description>A toolbox converted into use as a seed vault.  Contains lots of little containers just for seeds.  Because it is enclosed, it does protect against deterioration if left outside.</description>
+        <thingClass>Building_Storage</thingClass>
+        <graphicData>
+            <texPath>Things/Building/Misc/ToolCabinet</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(2,1)</drawSize>
+        </graphicData>
+        <fillPercent>0.4</fillPercent>
+        <castEdgeShadows>true</castEdgeShadows>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Stony</li>
+        </stuffCategories>
+        <costStuffCount>90</costStuffCount>
+        <statBases>
+            <MaxHitPoints>120</MaxHitPoints>
+            <Beauty>1</Beauty>
+            <Mass>16</Mass>
+            <WorkToBuild>1600</WorkToBuild>
+            <Flammability>1.0</Flammability>
+        </statBases>
+        <size>(2,1)</size>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <building>
+            <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+            <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+            <defaultStorageSettings>
+                <priority>Important</priority>
+                <filter>
+                <categories>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">SeedsCategory</li>
+                </categories>
+                </filter>
+            </defaultStorageSettings>
+            <fixedStorageSettings>
+            <filter>
+                <categories>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">SeedsCategory</li>
+                </categories>
+            </filter>
+            </fixedStorageSettings>
+
+        </building>
+        <staticSunShadowHeight>0.9</staticSunShadowHeight>
+        <comps>
+        <li Class="LWM.DeepStorage.Properties">
+            <maxNumberStacks>10</maxNumberStacks>
+            <minTimeStoringTakes>5</minTimeStoringTakes>
+            <additionalTimeEachStack>10</additionalTimeEachStack><!-- Gotta find the correct seed container -->
+            <maxMassOfStoredItem>70</maxMassOfStoredItem>
+            <maxTotalMass>260</maxTotalMass>
+            <overlayType>SumOfItemsPerCell</overlayType>
+        </li>
+        </comps>
+        <researchPrerequisites>
+    		<li>ComplexFurniture</li>
+		    <li>Machining</li>
+        </researchPrerequisites>
+  </ThingDef>
+
+
+</Defs>
