@@ -3,7 +3,8 @@
     <name>Seed Vault</name>
     <author>Espio Idsavant</author>
     <packageId>espio.seedvault</packageId>
-    <description>Intended to be used with SeedsPlease: lite and LWM's Deep Storage, this introduces a Seed Vault storage item that can only contain seeds, but can store a massive amount of them.</description>
+    <description>Intended to be used with SeedsPlease: lite and LWM's Deep Storage, this introduces Seed Vault storage items that can only contain seeds, but can store a massive amount of them.  Art provided by .Phaneron! Additional graphics unlocked with Vanilla Furniture Expanded.</description>
+    <modVersion>1.1</modVersion>
     <supportedVersions>
         <li>1.4</li>
     </supportedVersions>
@@ -24,6 +25,7 @@
     <loadAfter>
         <li>owlchemist.seedspleaselite</li>
         <li>lwm.deepstorage</li>
+        <li>VanillaExpanded.VFECore</li>
     </loadAfter>
 </ModMetaData>
 <!--
